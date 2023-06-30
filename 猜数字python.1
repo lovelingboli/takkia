@@ -1,0 +1,24 @@
+import random
+num = random.randint(1, 10)
+guest_num = int(input("第一次猜测："))
+if guest_num == num:
+    print("byd,运气这么好是吧")
+else:
+    if guest_num > num:
+        print("猜大了")
+    else:
+        print("猜小了")
+    guest_num = int(input("第二次猜测："))
+    if guest_num == num:
+        print("第二次才猜对")
+    else:
+        print("还猜不对？")
+        if guest_num > num:
+            print("猜大了")
+        else:
+            print("猜小了")
+        guest_num = int(input("第三次输入："))
+        if guest_num == num:
+            print("终于猜对了")
+        else:
+            print("给你三次机会你不珍惜")
