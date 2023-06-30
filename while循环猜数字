@@ -1,0 +1,10 @@
+import random
+num = random.randint(1,10)
+guest_1 = int(input("开始猜吧："))
+while guest_1 != num:
+    guest_1 = int(input("不对，继续猜："))
+    if guest_1 >= num:
+        print("猜大了")
+    else:
+        print("猜小了")
+print("猜对啦！！！！！！！！！")
