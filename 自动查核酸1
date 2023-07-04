@@ -1,0 +1,5 @@
+#自动查核酸
+def welcome_1():
+    print("欢迎来到黑马\n请出示核酸")
+
+welcome_1()
