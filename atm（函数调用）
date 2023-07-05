@@ -1,0 +1,62 @@
+money = 50000000
+name = input("请输入姓名：")
+def caidan():
+    '''
+    菜单的定义函数
+    :return:
+    '''
+    print("-----------主菜单-------------")
+    print("查询\t[输入1]")
+    print("存款\t[输入2]")
+    print("取款\t[输入3]")
+    print("退出\t[输入4]")
+    a = int(input("%s,您好，欢迎来到atm，请选择操作：" % name))
+    if a == 1:
+        other_money()
+    elif a == 2:
+        cun_money()
+    elif a == 3:
+        qu_money()
+    elif a== 4:
+        tui()
+def other_money():
+    '''
+    剩余金额的数量
+    :return:
+    '''
+    print("------------查询余额-------------")
+    print("%s，你好，你的余额%d" % (name, money))
+    caidan()
+
+def cun_money():
+    '''
+    存钱的定义函数
+    :return:
+    '''
+    print("-----------查询存款---------------")
+    money_1 = int(input("存款="))
+    print("%s,你好，您存款%d成功" % (name, money_1))
+    global money
+    money = money + money_1
+    print("%s,你好，您余额%d" % (name, money))
+    caidan()
+def qu_money():
+    '''
+    取钱函数的定义
+    :return:
+    '''
+    money_2 = int(input("取款="))
+    print("--------------取款----------------")
+    print("%s,你好，您取款%d成功 " % (name, money_2))
+    global money
+    money = money - money_2
+    print("%s,你好，您余额%d" % (name, money))
+    caidan()
+def tui():
+    '''
+    退出本次程序
+    :return:
+    '''
+    print("-------------再见-------------")
+    print("欢迎下次光临")
+caidan()
