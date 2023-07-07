@@ -1,0 +1,20 @@
+执行文件：
+from test_1 import *
+#jia(5, 6)
+num_2 = jian(7, 6)
+print(num_2)
+
+
+
+
+调用模块：
+__all__ = ['jian']
+def jia(a, b):
+    num = a + b
+    print(num)
+def jian(a, b):
+    num_1 = a - b
+    return num_1
+if __name__ == '__main__':
+    num_2 = jian(7, 8)
+    print(num_2)
